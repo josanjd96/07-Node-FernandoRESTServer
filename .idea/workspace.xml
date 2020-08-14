@@ -32,6 +32,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\josan\Desktop\Node, De cero a experto\07-REST-Server" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,11 +45,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597392708085</updated>
-      <workItem from="1597392709152" duration="3554000" />
+      <workItem from="1597392709152" duration="4527000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="159" y="170" key="FileChooserDialogImpl" timestamp="1597399227259">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="159" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597399227259" />
   </component>
 </project>
