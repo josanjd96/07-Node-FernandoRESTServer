@@ -3,17 +3,20 @@ require('./config/congif.js');
 
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+
 
 const app = express();
 
-// Middlewares -----------------------------------------------------------------
+const bodyParser = require('body-parser');
+
+// Middlewares -----------------------------------------------------------------------
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 
-app.use( require( './routes/user' ) );
+// Configuración global de rutas ------------------------------------------------------
+app.use( require( './routes/index' ) );
 
-
+// MongooseDB ----------------------------------------------------------------------------
 mongoose.connect(process.env.URLDB,
     {
         useNewUrlParser: true,
