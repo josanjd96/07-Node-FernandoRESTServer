@@ -3,6 +3,7 @@ require('./config/congif.js');
 
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 
 
 const app = express();
@@ -12,6 +13,10 @@ const bodyParser = require('body-parser');
 // Middlewares -----------------------------------------------------------------------
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
+
+// Habilitar la carpeta public -------------------------------------------------------------
+app.use( express.static(  path.resolve( __dirname, '../public' )) );
+
 
 // Configuración global de rutas ------------------------------------------------------
 app.use( require( './routes/index' ) );
