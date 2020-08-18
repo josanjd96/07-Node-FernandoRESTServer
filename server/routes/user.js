@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const _ = require('underscore');
 
 
-const Usuario = require('../models/user.js');
+const Usuario = require('../models/usuarios.js');
 const { verificaAdmin_Role, verificaToken } = require("../middlewares/authorization");
 
 const app = express();
@@ -41,12 +41,11 @@ app.get('/user', verificaToken, function (req, res) {
                     cuantos: conteo
                 });
             })
+
         });
-
-
 });
 
-app.post('/user', [ verificaToken, verificaAdmin_Role ], function (req, res) {
+app.post('/user', verificaToken, function (req, res) {
 
     let body = req.body;
 
@@ -94,7 +93,7 @@ app.put('/user/:id', [ verificaToken, verificaAdmin_Role ], function (req, res) 
             user: userDB
         });
 
-    })
+    });
 
 });
 
@@ -132,8 +131,7 @@ app.delete('/user/:id', [ verificaToken, verificaAdmin_Role ], function (req, re
             user: userDeleted
         });
 
-    } );
-
+    });
 
 });
 
