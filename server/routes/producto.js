@@ -5,7 +5,7 @@ const express = require('express');
 let { verificaToken } = require('../middlewares/authorization');
 
 let app = express();
-let Producto = require('../models/producto');
+let Producto = require('../models/productos');
 
 
 // HTTP Routes ------------------------------------------------------------------------
@@ -116,6 +116,7 @@ app.post( '/productos',verificaToken, (req, res) => {
         descripcion: body.descripcion,
         disponible: body.disponible,
         categoria: body.categoria,
+        img: body.img
 
     });
 

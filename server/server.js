@@ -16,6 +16,7 @@ app.use(bodyParser.json()); // parse application/json
 
 // Habilitar la carpeta public -------------------------------------------------------------
 app.use( express.static(  path.resolve( __dirname, '../public' )) );
+app.use( express.static(  path.resolve( __dirname, '../uploads' )) );
 
 
 // Configuración global de rutas ------------------------------------------------------
